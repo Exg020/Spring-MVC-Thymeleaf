@@ -1,5 +1,7 @@
 package com.example.SpringMVCThymeleaf;
 
+import com.example.SpringMVCThymeleaf.service.GymService9;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,16 +10,17 @@ import java.util.Arrays;
 
 @Controller
 public class GymController {
+    @Autowired
+    private GymService9 gymService9;
+
 
     @GetMapping
    String getGyms(Model model){
         model.addAttribute("title","Northwest Arkansas Gyms");
-        model.addAttribute("listOfGyms",Arrays.asList(
-                new Gym(1,"Ozark Iron Gym"," 3801 Johnson Mill Blvd STE C"," ","Johnson","Arkansas",72704),
-                new Gym(2,"Elm Street"," 3503 Elm Springs Rd"," ","Springdale","Arkansas",72762),
-                new Gym(3,"Anytime Fitness","7058 W Sunset Ave Suite 2"," ","Springdale","Arkansas",72762),
-                new Gym(4,"The J Street Gym","2614 SE J St", " ","Bentonville","Arkansas",72712)
-        ));
+        model.addAttribute("listOfGyms",gymService9.getAll());
         return "gyms";
     }
+
+
+
 }
