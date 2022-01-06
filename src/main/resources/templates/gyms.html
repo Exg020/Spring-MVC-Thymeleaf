@@ -20,14 +20,14 @@
         </tr>
     </thread>
     <tbody>
-    <tr th:each="gym: ${gyms}">
+    <tr th:each="gym: ${listOfGyms}">
         <td th:text="${gym.id}"/>
         <td th:text="${gym.name}"/>
         <td th:text="${gym.street1}"/>
         <td th:text="${gym.street2}"/>
-        <td th:text="${gym:city}"/>
-        <td th:text="${gym:state}"/>
-        <td th:text="${gym:zip}"/>
+        <td th:text="${gym.city}"/>
+        <td th:text="${gym.state}"/>
+        <td th:text="${gym.zip}"/>
     </tr>
     </tbody>
 </table>
