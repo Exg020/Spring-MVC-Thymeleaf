@@ -9,21 +9,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller
-public class AddController {
 
+@Controller
+public class RemoveController {
     @Autowired
     private GymService9 gymService9;
 
-    @GetMapping("/add")
-    public String addGym(Model model){
-        Gym9 gym = new Gym9();
-        model.addAttribute("gym",gym);
-        model.addAttribute("activePage","add");
-        return "add";
+    @GetMapping("/remove")
+    public String removeGym(Model model){
+        Gym9 gym9 = new Gym9();
+        int gymId = 0;
+        model.addAttribute("gymId",gymId);
+        model.addAttribute("activePage","remove");
+        return "remove";
     }
-    @PostMapping("/add")
-    public void formPost(@ModelAttribute("gym") Gym9 gym, Model model){
-        gymService9.addGym(gym);
+
+    @PostMapping("/remove")
+    public String formPost(@ModelAttribute("gymId") int id, Model model){
+       gymService9.deleteById(id);
+        return "index";
     }
+
+
 }

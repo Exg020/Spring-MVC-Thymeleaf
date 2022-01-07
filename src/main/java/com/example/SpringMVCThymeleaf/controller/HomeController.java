@@ -13,25 +13,4 @@ public class HomeController {
     @GetMapping()
     public String home(){return "index";}
 
-    @GetMapping("/gyms")
-    public String getGyms(Model model){
-        model.addAttribute("activePage","gymList");
-        model.addAttribute("listOfGyms",gymService9.getAll());
-        return "gyms";
-    }
-
-   // @GetMapping("/add")
-    public String addGym(Model model){
-        model.addAttribute("activePage","add");
-        return "add";
-    }
-
-    @GetMapping("/remove")
-    public String removeGym(Model model){
-        model.addAttribute("activePage","remove");
-        return "remove";
-    }
-
-
-
 }

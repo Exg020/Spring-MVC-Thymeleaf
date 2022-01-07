@@ -37,4 +37,8 @@ public class GymService9 {
     public List<Gym9> getAll() {
         return gymRepository9.findAll();
     }
+
+    public void deleteById(int id){
+        gymRepository9.deleteById(id);
+    }
 }

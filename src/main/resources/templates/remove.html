@@ -25,7 +25,13 @@
         </ul>
     </div>
 </nav>
-<H1> Remove Gym</H1>
-
+<h1>Remove Gym</h1>
+<form action="#" th:action="@{/remove}" method="post" th:object="${gymId}">
+    <div>
+        <label for="id" class="form-label" > Gym Id</label>
+        <input type="text" class="form-control" id="id">
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>
 </body>
 </html>

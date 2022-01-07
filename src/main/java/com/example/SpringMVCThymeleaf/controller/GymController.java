@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Arrays;
-/*
 
 @Controller
 public class GymController {
@@ -15,12 +14,11 @@ public class GymController {
     private GymService9 gymService9;
 
 
-    @GetMapping
-   String getGyms(Model model){
-        model.addAttribute("title","Northwest Arkansas Gyms");
+    @GetMapping("/gyms")
+    public String getGyms(Model model){
+        model.addAttribute("activePage","gymList");
         model.addAttribute("listOfGyms",gymService9.getAll());
         return "gyms";
     }
 
 }
-*/

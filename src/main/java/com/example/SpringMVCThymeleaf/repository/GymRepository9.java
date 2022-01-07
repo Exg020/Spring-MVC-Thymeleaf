@@ -11,4 +11,6 @@ public interface GymRepository9 extends JpaRepository<Gym9, Integer> {
     List<Gym9> findByNameContaining(String name);
 
     Gym9 findById(int id);
+
+    Gym9 deleteById(int id);
 }
