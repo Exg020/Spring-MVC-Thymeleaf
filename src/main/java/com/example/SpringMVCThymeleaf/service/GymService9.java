@@ -1,6 +1,6 @@
 package com.example.SpringMVCThymeleaf.service;
 
-import com.example.SpringMVCThymeleaf.Gym9;
+import com.example.SpringMVCThymeleaf.model.Gym9;
 import com.example.SpringMVCThymeleaf.repository.GymRepository9;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

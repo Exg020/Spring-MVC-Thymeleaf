@@ -1,6 +1,6 @@
 package com.example.SpringMVCThymeleaf.repository;
 
-import com.example.SpringMVCThymeleaf.Gym9;
+import com.example.SpringMVCThymeleaf.model.Gym9;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.example.SpringMVCThymeleaf;
+package com.example.SpringMVCThymeleaf.model;
 
 import javax.persistence.*;
 

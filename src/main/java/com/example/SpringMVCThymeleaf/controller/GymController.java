@@ -1,4 +1,4 @@
-package com.example.SpringMVCThymeleaf;
+package com.example.SpringMVCThymeleaf.controller;
 
 import com.example.SpringMVCThymeleaf.service.GymService9;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Arrays;
+/*
 
 @Controller
 public class GymController {
@@ -21,6 +22,5 @@ public class GymController {
         return "gyms";
     }
 
-
-
 }
+*/
