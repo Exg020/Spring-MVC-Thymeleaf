@@ -18,15 +18,16 @@ public class RemoveController {
     @GetMapping("/remove")
     public String removeGym(Model model){
         Gym9 gym9 = new Gym9();
-        int gymId = 0;
-        model.addAttribute("gymId",gymId);
+        model.addAttribute("gym",gym9);
         model.addAttribute("activePage","remove");
         return "remove";
     }
 
     @PostMapping("/remove")
-    public String formPost(@ModelAttribute("gymId") int id, Model model){
-       gymService9.deleteById(id);
+    public String formPost(@ModelAttribute("gym") Gym9 gym, Model model){
+        var tempId = gym.getId();
+        System.out.println(tempId);
+       gymService9.deleteById((int)tempId);
         return "index";
     }
 

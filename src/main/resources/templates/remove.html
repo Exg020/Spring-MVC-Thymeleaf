@@ -26,12 +26,14 @@
     </div>
 </nav>
 <h1>Remove Gym</h1>
-<form action="#" th:action="@{/remove}" method="post" th:object="${gymId}">
-    <div>
-        <label for="id" class="form-label" > Gym Id</label>
-        <input type="text" class="form-control" id="id">
+<form action="#" th:action="@{/remove}" method="post" th:object="${gym}">
+    <div class="mb-3">
+        <label for="gymId" class="form-label">Gym Id</label>
+        <input type="text" class="form-control" id="gymId">
     </div>
-    <button type="submit" class="btn btn-primary">Delete</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
 </form>
 </body>
 </html>
